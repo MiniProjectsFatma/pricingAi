@@ -28,6 +28,11 @@ PROXY_PASSWORD='password'
 PROXY_ENDPOINT='gate.smartproxy.com'
 PROXY_PORT='proxy_port'
 
+
+SCRAPEOPS_PROXY_ENABLED=True
+SCRAPEOPS_API_KEY='c0469d5b-6edc-49b5-97ec-03d99089da91'
+
+
 # ROTATING_PROXY_LIST=[
 #     '207.55.243.92:58613',
 #     '46.183.123.241:53551',
@@ -72,10 +77,11 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
 #    "scraper.middlewares.ScraperDownloaderMiddleware": 543,
-   "scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+#    "scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
 #    "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
 #    "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
 #    "scraper.middlewares.MyProxyMiddleware": 350,
+     "scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk": 725,
 }
 
 # Enable or disable extensions
