@@ -10,7 +10,7 @@ API_KEY='c0469d5b-6edc-49b5-97ec-03d99089da91'
 
 def get_proxy_url(url):
     payload={'api_key': API_KEY, 'url':url}
-    proxy_url='https://proxy.scrapeops.io/v1/'+ urlencode(payload)
+    proxy_url='https://proxy.scrapeops.io/v1/?'+ urlencode(payload)
     return proxy_url
 
 
